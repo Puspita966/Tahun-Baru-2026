@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(circle at bottom, #020024, #090979, #000);
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Judul */
+.feliz {
+    margin-top: 40px;
+    font-size: 48px;
+    font-weight: bold;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px gold; }
+    to { text-shadow: 0 0 30px gold; }
+}
+
+/* Tahun */
+.ano_novo {
+    margin-top: 140px;
+    font-size: 120px;
+    font-weight: bold;
+    position: relative;
+}
+
+.num {
+    color: white;
+}
+
+.digit {
+    color: #ff5555;
+    transition: transform 1s, color 1s;
+}
+
+.digit.new {
+    color: gold;
+    transform: scale(1.3);
+}
+
+/* Balon */
+.balao {
+    width: 40px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: -70px;
+    top: 10px;
+    animation: naik 4s linear forwards;
+}
+
+@keyframes naik {
+    from { transform: translateY(0); }
+    to { transform: translateY(-500px); }
+}
+
+.balao.pop {
+    animation: none;
+    opacity: 0;
+}
+
+/* Fireworks */
+.fogos {
+    opacity: 0;
+}
+
+.fogos.show {
+    opacity: 1;
+}
+
+.fogos div {
+    position: absolute;
+    bottom: 0;
+}
+
+.f1 { left: 10%; animation: boom 2s infinite; }
+.f2 { left: 35%; animation: boom 2.5s infinite; }
+.f3 { left: 65%; animation: boom 1.8s infinite; }
+.f4 { left: 85%; animation: boom 2.2s infinite; }
+
+.fogos i {
+    width: 4px;
+    height: 20px;
+    background: gold;
+    display: block;
+    transform-origin: bottom;
+}
+
+.fogos span:nth-child(1) i { transform: rotate(0deg); }
+.fogos span:nth-child(2) i { transform: rotate(60deg); }
+.fogos span:nth-child(3) i { transform: rotate(120deg); }
+
+@keyframes boom {
+    0% { opacity: 0; transform: translateY(0); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-300px); }
+}

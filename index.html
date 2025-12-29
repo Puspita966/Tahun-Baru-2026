@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="feliz">🎉 Happy New Year 🎉</div>
+
+<div class="ano_novo">
+    <span class="num">202</span>
+    <span class="digit" id="yearDigit">5</span>
+    <div class="balao" id="balloon"></div>
+</div>
+
+<div class="fogos" id="fireworks">
+    <div class="f1"><span><i></i></span><span><i></i></span><span><i></i></span></div>
+    <div class="f2"><span><i></i></span><span><i></i></span><span><i></i></span></div>
+    <div class="f3"><span><i></i></span><span><i></i></span><span><i></i></span></div>
+    <div class="f4"><span><i></i></span><span><i></i></span><span><i></i></span></div>
+</div>
+
+<script>
+setTimeout(() => {
+    document.getElementById("yearDigit").innerText = "6";
+    document.getElementById("yearDigit").classList.add("new");
+    document.getElementById("balloon").classList.add("pop");
+    document.getElementById("fireworks").classList.add("show");
+}, 4000);
+</script>
+
+</body>
+</html>
